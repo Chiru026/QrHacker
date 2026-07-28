@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Website Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website Title -->
+    <title>Generate QR | QrHacker</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/generate.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+     NAVBAR
+========================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <img src="assets/logo/qrhacker-logo.png"
+        alt="QrHacker Logo"
+        class="logo-image">
+
+        <h1>QrHacker</h1>
+
+    </div>
+
+    <nav>
+
+        <div class="menu-toggle" id="mobile-menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="scan.html">Scan QR</a></li>
+
+            <li><a href="generate.html" class="active">Generate QR</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="generate-hero hidden">
+
+    <h2>Generate QR Code</h2>
+
+    <p>
+
+        Instantly create QR Codes from Website URLs
+        or Plain Text.
+
+    </p>
+
+</section>
+
+<!-- ==========================================
+     TYPE SELECTION
+========================================== -->
+
+<section class="generator-section hidden">
+
+    <div class="generator-card">
+
+        <h3>Select QR Type</h3>
+
+        <div class="type-selection">
+
+            <button
+                class="type-btn active"
+                id="url-btn"
+                type="button">
+
+                <i class="fa-solid fa-link"></i>
+
+                Website URL
+
+            </button>
+
+            <button
+                class="type-btn"
+                id="text-btn"
+                type="button">
+
+                <i class="fa-solid fa-font"></i>
+
+                Plain Text
+
+            </button>
+
+        </div>
+
+        <!-- URL Input -->
+
+        <div id="url-input">
+
+            <input
+                type="url"
+                id="website-url"
+                placeholder="https://example.com">
+
+        </div>
+
+        <!-- Text Input -->
+
+        <div
+            id="text-input"
+            style="display:none;">
+
+            <textarea
+                id="plain-text"
+                rows="6"
+                placeholder="Enter your text here..."></textarea>
+
+        </div>
+
+        <button id="generate-btn" type="button">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            Generate QR
+
+        </button>
+
+    </div>
+
+</section>
+<p id="success-message" class="success-message">
+
+    ✅ Ready to Download
+
+</p>
+<!-- ==========================================
+     QR RESULT
+========================================== -->
+
+<section class="preview-section hidden">
+
+    <h2>Your QR Code</h2>
+
+    <div class="preview-card">
+
+        <div id="qr-preview">
+
+            <div class="placeholder">
+
+                <i class="fa-solid fa-qrcode"></i>
+
+                <p>
+
+                    Your generated QR Code
+                    will appear here.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="download-buttons">
+
+           <button id="download-png" disabled type="button">
+
+    <i class="fa-solid fa-image"></i>
+
+    PNG
+
+</button>
+
+<button id="download-jpg" disabled type="button">
+
+    <i class="fa-solid fa-file-image"></i>
+
+    JPG
+
+</button>
+
+<button id="generate-again" disabled type="button">
+
+    <i class="fa-solid fa-rotate-right"></i>
+
+    Generate Again
+
+</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+
+            <img src="assets/logo/qrhacker-logo.png"
+            alt="QrHacker">
+
+            <h2>QrHacker</h2>
+
+            <p>Scan. Generate. Verify.</p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="scan.html">Scan QR</a>
+
+            <a href="generate.html">Generate QR</a>
+
+            <a href="about.html">About</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 QrHacker • Built with HTML, CSS and JavaScript
+
+    </div>
+
+</footer>
+<!-- ==========================================
+     Toast Notification
+========================================== -->
+
+<div id="toast" class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span>QR Code Generated Successfully!</span>
+
+</div>
+
+<!-- ==========================================
+     BACK TO TOP
+========================================== -->
+
+<button
+id="backToTop"
+type="button"
+title="Back To Top"
+aria-label="Back To Top">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- Scripts -->
+
+<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/generator.js"></script>
+
+</body>
+
+</html>

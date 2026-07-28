@@ -1,0 +1,668 @@
+/* ==========================================
+   QrHacker - Scan Page
+========================================== */
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0B0F19;
+    color:#FFFFFF;
+    font-family:"Inter",sans-serif;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+   Navigation (Same as Homepage)
+========================================== */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 60px;
+
+    background:#0B0F19;
+
+    border-bottom:1px solid rgba(0,207,255,.15);
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+.logo-image{
+
+    width:56px;
+    height:56px;
+    object-fit:contain;
+
+    transition:.3s;
+
+}
+
+.logo-image:hover{
+
+    transform:rotate(-5deg) scale(1.08);
+
+}
+
+.logo h1{
+
+    color:white;
+    font-size:24px;
+
+}
+
+.nav-links{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.nav-links a:hover,
+.nav-links .active{
+
+    color:#00CFFF;
+    text-shadow:0 0 10px #00CFFF;
+
+}
+
+/* ==========================================
+   Hero
+========================================== */
+
+.scan-hero{
+
+    text-align:center;
+    padding:90px 20px 50px;
+
+}
+
+.scan-hero h2{
+
+    font-size:52px;
+    font-family:"Poppins",sans-serif;
+    margin-bottom:20px;
+
+}
+
+.scan-hero p{
+
+    color:#B0B8C5;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+
+}
+
+/* ==========================================
+   Scanner Card
+========================================== */
+
+.scanner-section{
+
+    max-width:950px;
+    margin:auto;
+    padding:20px;
+
+}
+
+.scanner-card{
+
+    background:#121826;
+
+    border:1px solid rgba(0,207,255,.20);
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 0 25px rgba(0,207,255,.08);
+
+}
+
+/* Camera */
+
+#reader{
+
+    width:100%;
+    min-height:350px;
+
+    border:2px dashed rgba(0,207,255,.25);
+
+    border-radius:16px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.camera-placeholder{
+
+    text-align:center;
+
+}
+
+.camera-placeholder i{
+
+    font-size:70px;
+    color:#00CFFF;
+    margin-bottom:20px;
+
+}
+
+.camera-placeholder h3{
+
+    margin-bottom:15px;
+
+}
+
+.camera-placeholder p{
+
+    color:#B0B8C5;
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.scanner-buttons{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+#start-camera{
+
+    background:#00CFFF;
+
+    color:#0B0F19;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+#start-camera:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 25px rgba(0,207,255,.35);
+
+}
+
+.upload-btn{
+
+    border:2px solid #00CFFF;
+
+    color:#00CFFF;
+
+    text-align:center;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.upload-btn:hover{
+
+    background:#00CFFF;
+
+    color:#0B0F19;
+
+}
+
+.or-text{
+
+    text-align:center;
+
+    color:#8FA2BC;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   Result
+========================================== */
+
+.result-section{
+
+    max-width:950px;
+
+    margin:70px auto;
+
+    padding:20px;
+
+}
+
+.result-section h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:34px;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+.result-card{
+
+    background:#121826;
+
+    border:1px solid rgba(0,207,255,.20);
+
+    border-radius:18px;
+
+    padding:35px;
+
+}
+
+#result-text{
+
+    min-height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#B0B8C5;
+
+    margin-bottom:30px;
+
+    border:1px dashed rgba(0,207,255,.20);
+
+    border-radius:12px;
+
+}
+
+.result-buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.result-buttons button{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1C2433;
+
+    color:#B0B8C5;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+.result-buttons button:hover{
+
+    background:#00CFFF;
+
+    color:#0B0F19;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 20px rgba(0,207,255,.45);
+
+}
+
+#result-text{
+
+    word-break: break-word;
+
+    overflow-wrap: anywhere;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+footer{
+
+    margin-top:80px;
+
+    background:#08111D;
+
+    border-top:1px solid rgba(0,207,255,.15);
+
+}
+
+.footer-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:40px;
+
+    padding:60px 20px;
+
+}
+
+.footer-logo img{
+
+    width:70px;
+    margin-bottom:15px;
+
+}
+
+.footer-logo p{
+
+    color:#B0B8C5;
+
+}
+
+.footer-links{
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+
+}
+
+.footer-links a{
+
+    text-decoration:none;
+    color:#B0B8C5;
+
+}
+
+.footer-links a:hover{
+
+    color:#00CFFF;
+
+}
+
+.footer-bottom{
+
+    text-align:center;
+    padding:20px;
+    color:#8FA2BC;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+/* ==========================================
+   Scroll Animation
+========================================== */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:.8s;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
+   Back To Top
+========================================== */
+
+#backToTop{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#00CFFF;
+
+    color:#0B0F19;
+
+    cursor:pointer;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+
+}
+
+/* ==========================================
+   Mobile Menu
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    cursor:pointer;
+
+    gap:6px;
+
+}
+
+.menu-toggle span{
+
+    width:28px;
+
+    height:3px;
+
+    background:white;
+
+    border-radius:5px;
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        padding:18px 20px;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:90px;
+
+        left:0;
+
+        width:100%;
+
+        background:#0B0F19;
+
+        flex-direction:column;
+
+        display:none;
+
+        align-items:center;
+
+        padding:30px;
+
+        gap:25px;
+
+        border-top:1px solid rgba(0,207,255,.15);
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
+
+    }
+
+    .scan-hero{
+
+        padding:60px 20px 30px;
+
+    }
+
+    .scan-hero h2{
+
+        font-size:40px;
+
+    }
+
+    #reader{
+
+        min-height:260px;
+
+    }
+
+    .result-buttons{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/* ==========================================
+   Toast Notification
+========================================== */
+
+.toast{
+
+    position:fixed;
+
+    top:30px;
+    right:30px;
+
+    background:#121826;
+
+    color:white;
+
+    border-left:5px solid #00CFFF;
+
+    padding:16px 22px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    box-shadow:0 0 25px rgba(0,207,255,.25);
+
+    transform:translateX(400px);
+
+    transition:.4s ease;
+
+    z-index:9999;
+
+}
+
+.toast i{
+
+    color:#00CFFF;
+
+    font-size:22px;
+
+}
+
+.toast.show{
+
+    transform:translateX(0);
+
+}

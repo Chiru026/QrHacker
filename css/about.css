@@ -1,0 +1,813 @@
+/* ==========================================
+   QrHacker v1.0
+   About Page Styles
+========================================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#0B0F19;
+    color:#FFFFFF;
+    font-family:"Inter",sans-serif;
+    overflow-x:hidden;
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 60px;
+
+    background:#0B0F19;
+
+    border-bottom:1px solid rgba(0,207,255,.15);
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+.logo-image{
+
+    width:56px;
+    transition:.3s ease;
+
+}
+
+.logo-image:hover{
+
+    transform:rotate(-5deg) scale(1.08);
+
+}
+
+.logo h1{
+
+    font-size:24px;
+    color:white;
+
+}
+
+.nav-links{
+
+    display:flex;
+    gap:35px;
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:#00CFFF;
+    text-shadow:0 0 12px #00CFFF;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.about-hero{
+
+    text-align:center;
+
+    padding:110px 20px;
+
+}
+
+.about-hero h2{
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.about-hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#B0B8C5;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   MISSION
+========================================== */
+
+.mission-section{
+
+    padding:40px 20px 100px;
+
+}
+
+.mission-card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:#121826;
+
+    border:1px solid rgba(0,207,255,.18);
+
+    border-radius:20px;
+
+    padding:50px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.mission-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00CFFF;
+
+    box-shadow:0 0 30px rgba(0,207,255,.35);
+
+}
+
+.mission-card i{
+
+    font-size:60px;
+
+    color:#00CFFF;
+
+    margin-bottom:25px;
+
+}
+
+.mission-card h2{
+
+    font-family:"Poppins",sans-serif;
+
+    margin-bottom:20px;
+
+}
+
+.mission-card p{
+
+    color:#B0B8C5;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.features-section{
+
+    padding:100px 20px;
+
+    text-align:center;
+
+}
+
+.features-section h2{
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+.features-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.feature-card{
+
+    background:#121826;
+
+    border:1px solid rgba(0,207,255,.18);
+
+    border-radius:18px;
+
+    padding:40px 25px;
+
+    transition:.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00CFFF;
+
+    box-shadow:0 0 30px rgba(0,207,255,.35);
+
+}
+
+.feature-card i{
+
+    font-size:48px;
+
+    color:#00CFFF;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+
+}
+
+.feature-card:hover i{
+
+    transform:scale(1.15) rotate(6deg);
+
+}
+
+.feature-card h3{
+
+    margin-bottom:15px;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+.feature-card p{
+
+    color:#B0B8C5;
+
+    line-height:1.7;
+
+}
+/* ==========================================
+   WHY CHOOSE US
+========================================== */
+
+.why-section{
+
+    padding:100px 20px;
+
+    text-align:center;
+
+}
+
+.why-section h2{
+
+    font-size:42px;
+
+    font-family:"Poppins",sans-serif;
+
+    margin-bottom:60px;
+
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.why-card{
+
+    background:#121826;
+
+    border:1px solid rgba(0,207,255,.18);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    transition:.3s;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00CFFF;
+
+    box-shadow:0 0 30px rgba(0,207,255,.35);
+
+}
+
+.why-card i{
+
+    font-size:46px;
+
+    color:#00CFFF;
+
+    margin-bottom:18px;
+
+}
+
+.why-card h3{
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+/* ==========================================
+   TECHNOLOGIES
+========================================== */
+
+.tech-section{
+
+    padding:100px 20px;
+
+    text-align:center;
+
+}
+
+.tech-section h2{
+
+    font-size:42px;
+
+    font-family:"Poppins",sans-serif;
+
+    margin-bottom:60px;
+
+}
+
+.tech-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.tech-card{
+
+    background:#121826;
+
+    border:1px solid rgba(0,207,255,.18);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    transition:.3s;
+
+}
+
+.tech-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00CFFF;
+
+    box-shadow:0 0 30px rgba(0,207,255,.35);
+
+}
+
+.tech-card i{
+
+    font-size:52px;
+
+    color:#00CFFF;
+
+    margin-bottom:20px;
+
+}
+
+.tech-card h3{
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+/* ==========================================
+   VERSION
+========================================== */
+
+.version-section{
+
+    padding:100px 20px;
+
+}
+
+.version-card{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:#121826;
+
+    border:1px solid rgba(0,207,255,.18);
+
+    border-radius:20px;
+
+    padding:55px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.version-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00CFFF;
+
+    box-shadow:0 0 35px rgba(0,207,255,.35);
+
+}
+
+.version-card i{
+
+    font-size:60px;
+
+    color:#00CFFF;
+
+    margin-bottom:25px;
+
+}
+
+.version-card h2{
+
+    font-family:"Poppins",sans-serif;
+
+    margin-bottom:20px;
+
+}
+
+.version-card p{
+
+    color:#B0B8C5;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    margin-top:100px;
+
+    background:#08111D;
+
+    border-top:1px solid rgba(0,207,255,.15);
+
+}
+
+.footer-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:40px;
+
+    padding:60px 20px;
+
+}
+
+.footer-logo img{
+
+    width:70px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-logo h2{
+
+    margin-bottom:10px;
+
+}
+
+.footer-logo p{
+
+    color:#B0B8C5;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.footer-links h3{
+
+    color:white;
+
+}
+
+.footer-links a{
+
+    color:#B0B8C5;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#00CFFF;
+
+}
+
+.footer-bottom{
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#8FA2BC;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+/* ==========================================
+   SCROLL ANIMATION
+========================================== */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:.8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    cursor:pointer;
+
+}
+
+.menu-toggle span{
+
+    width:28px;
+
+    height:3px;
+
+    background:white;
+
+    border-radius:6px;
+
+}
+
+/* ==========================================
+   BACK TO TOP
+========================================== */
+
+#backToTop{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#00CFFF;
+
+    color:#0B0F19;
+
+    font-size:20px;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    z-index:999;
+
+    box-shadow:0 0 20px rgba(0,207,255,.35);
+
+}
+
+#backToTop:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 30px rgba(0,207,255,.55);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        padding:18px 20px;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:80px;
+
+        left:0;
+
+        width:100%;
+
+        background:#0B1220;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        padding:25px 0;
+
+        border-top:1px solid rgba(0,207,255,.2);
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
+
+    }
+
+    .nav-links li{
+
+        margin:15px 0;
+
+    }
+
+    .about-hero h2{
+
+        font-size:42px;
+
+    }
+
+    .about-hero p{
+
+        font-size:18px;
+
+    }
+
+    .mission-card{
+
+        padding:30px;
+
+    }
+
+    .features-grid,
+    .why-grid,
+    .tech-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-container{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    #backToTop{
+
+        width:48px;
+
+        height:48px;
+
+        right:20px;
+
+        bottom:20px;
+
+    }
+
+}
