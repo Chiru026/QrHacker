@@ -97,7 +97,7 @@ QrHacker/
 Clone the repository
 
 ```bash
-git clone xxxxxxxxxxxxxxxxxxxxx
+git clone https://chiru026.github.io/QrHacker/
 ```
 
 Open the project
