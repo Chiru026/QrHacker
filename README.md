@@ -4,13 +4,6 @@ A modern, responsive QR Code Scanner & Generator built using **HTML**, **CSS**, 
 
 QrHacker provides a clean cyber-inspired interface for scanning and generating QR codes quickly on both desktop and mobile devices.
 
----
-
-## 🌐 Live Demo
-
-Coming Soon...
-
----
 
 # ✨ Features
 
@@ -121,13 +114,7 @@ VS Code Live Server
 - ⚪ Text : White
 - ❤️ Logo Eyes : Red
 
----
 
-# 📸 Screenshots
-
-Coming Soon...
-
----
 
 # 🎯 Roadmap
 
